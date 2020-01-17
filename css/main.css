@@ -301,6 +301,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 img {
   max-width: 100%;
@@ -313,6 +316,7 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  flex-grow: 1;
 }
 .content-wrapper {
   max-width: 380px;
