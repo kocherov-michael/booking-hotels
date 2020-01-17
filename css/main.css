@@ -334,6 +334,15 @@ img {
     margin: 0;
   }
 }
+aside.content-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  aside.content-wrapper {
+    max-width: 380px;
+  }
+}
 .content-wrapper--rounded {
   border-radius: 10px;
 }
@@ -545,14 +554,23 @@ a.appartment-card-link:hover .appartment-card__title {
   outline-style: none;
   border: 2px solid #f5585c;
 }
-.single {
-  padding-right: 40px;
-}
 .single-wrapper {
   display: flex;
-  justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
+  flex-direction: column-reverse;
+}
+.single-wrapper .single {
+  padding-left: 0;
+  padding-right: 40px;
+}
+.single-wrapper .gallery {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  .single-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .booking-form-wrapper {
   margin-left: -30px;
@@ -569,8 +587,13 @@ a.appartment-card-link:hover .appartment-card__title {
   text-transform: uppercase;
 }
 .single__title {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
+}
+@media (min-width: 576px) {
+  .single__title {
+    font-size: 28px;
+  }
 }
 .single__tag {
   color: #809fa4;
@@ -609,23 +632,75 @@ a.appartment-card-link:hover .appartment-card__title {
 }
 .gallery {
   flex-shrink: 0;
+  margin-bottom: 30px;
+}
+@media (min-width: 576px) {
+  .gallery {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .gallery {
+    margin-bottom: 0;
+    flex-direction: column;
+  }
 }
 .gallery__big {
   margin-bottom: 10px;
+}
+.gallery__big img {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .gallery__big {
+    margin-right: 10px;
+    margin-bottom: 0;
+    flex-grow: 8;
+  }
+}
+@media (min-width: 768px) {
+  .gallery__big {
+    margin-right: 0;
+    margin-bottom: 10px;
+    flex-grow: 0;
+  }
 }
 .gallery-mini-wrapper {
   display: flex;
   justify-content: space-between;
 }
-.moz-visible {
-  display: none;
-}
-@-moz-document url-prefix() {
-  .moz-hide {
-    display: none;
+@media (min-width: 576px) {
+  .gallery-mini-wrapper {
+    flex-direction: column;
+    flex-grow: 2;
   }
-  .moz-visible {
-    display: block;
+}
+@media (min-width: 768px) {
+  .gallery-mini-wrapper {
+    flex-direction: row;
+    flex-grow: 0;
+  }
+}
+.gallery__mini {
+  padding: 0;
+}
+.gallery__mini img {
+  width: 100%;
+}
+.gallery__mini:not(:last-child) {
+  padding-right: 10px;
+}
+@media (min-width: 576px) {
+  .gallery__mini:not(:last-child) {
+    padding-right: 0;
+    padding-bottom: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .gallery__mini:not(:last-child) {
+    padding-right: 10px;
+    padding-bottom: 0;
   }
 }
 .button {
