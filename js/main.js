@@ -1,4 +1,3 @@
-// $(document).ready(function(){
 $(function(){
 	$('#btn-open-form').click(function(e){
 		e.preventDefault();
@@ -8,9 +7,9 @@ $(function(){
 
 	$(".phone-mask").mask("+7 (999) 999-99-99");
 
-	var user = detect.parse(navigator.userAgent);
-	console.log(
-	  user.browser.family
-	);
+	// var user = detect.parse(navigator.userAgent);
+	// console.log(
+	//   // user.browser.family
+	// );
 
 });

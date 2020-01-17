@@ -1,11 +1,19 @@
 .admin-button-wrapper {
-	top: 104px;
+	top: 0;
 	right: 0;
 	position: absolute;
 	display: block;
 	width: 200px;
 	height: 51px;
 	overflow: hidden;
+	
+	@media (min-width: 576px) {
+		top: 30px;
+	}
+	
+	@media (min-width: 1200px) {
+		top: 104px;
+	}
 }
 
 .admin-button {
@@ -26,9 +34,11 @@
 	transition: 0.4s ease-in;
 	
 	&:hover {
-		text-decoration: none;
-		right: -20px;
-		background-color: #df373b;
+		@media (min-width: 576px) {
+			text-decoration: none;
+			right: -20px;
+			background-color: #df373b;
+		}
 	}
 	&:active {
 		background-color: #eb353a;

@@ -11,15 +11,27 @@ img {
 }
 
 .wrapper {
-	width: 1170px;
+	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
 }
 
 .content-wrapper {
-	width: 930px;
+
+	max-width: 500px;
 	background-color: #FFF;
 	padding: 30px 15px;
+	margin: 0 auto;
+	
+	@media (min-width: 576px) {
+		max-width: 930px;
+	}
+	@media (min-width: 1200px) {
+		margin: 0;
+	}
 }
 .content-wrapper--rounded {
 	border-radius: 10px;
